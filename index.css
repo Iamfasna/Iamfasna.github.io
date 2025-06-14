@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+ 
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0 2rem; 
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  font-size: 20px;
+}
+
+/* Add this to reduce space below header */
+.header + div {
+  margin-top: -20px; /* You can adjust this value */
+}
