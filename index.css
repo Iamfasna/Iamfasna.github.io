@@ -1,23 +1,101 @@
 body {
   margin: 0;
   padding: 0;
- 
+  font-family: 'Inter', sans-serif;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  margin: 0 2rem; 
+  margin: 1rem 2rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .links {
   display: flex;
-  gap: 2rem;
-  font-size: 20px;
+  gap: 1.5rem;
+  font-size: 18px;
+  flex-wrap: wrap;
 }
 
-/* Add this to reduce space below header */
 .header + div {
-  margin-top: -20px; /* You can adjust this value */
+  margin-top: -20px;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-subtitle {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5vw;
+  color: rgb(75, 69, 69);
+  margin: 0;
+  text-align: center;
+}
+
+.cta-image {
+  width: 100%;
+  display: block;
+  margin-top: -5%;
+}
+
+.qr-code {
+  margin-top: -10%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+
+.qr-code img {
+  width: 80px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 16px;
+  }
+
+  .hero-title {
+    font-size: 5vw;
+  }
+
+  .hero-subtitle {
+    font-size: 4vw;
+  }
+
+  .qr-code {
+    justify-content: center;
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+
+  .qr-code img {
+    width: 60px;
+  }
 }
